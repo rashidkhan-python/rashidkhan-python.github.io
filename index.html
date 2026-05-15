@@ -81,7 +81,7 @@
     .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
     h1 { font-size: 4.5rem; line-height: 1.15; margin-bottom: 1.5rem; }
     h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
-    .section-head { margin-bottom: 2.5rem; }
+    .section-head { margin-bottom: 2rem; }  /* reduced from 2.5rem to move form higher */
     .eyebrow {
       text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em;
       background: var(--tag-bg); border-radius: 40px; display: inline-block;
@@ -122,7 +122,7 @@
       font-size: 1.8rem;
       font-weight: 800;
       color: var(--text-primary);
-      line-height: 1; /* fixes vertical misalignment */
+      line-height: 1;
     }
     .logo-icon {
       width: 40px;
@@ -225,31 +225,36 @@
     .edu-cert-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
     .edu-card, .certs-card { background: var(--card-bg); border-radius: 14px; padding: 2rem; border: 1px solid var(--card-border); }
     .badge-merit { background: var(--success-color); color: white; border-radius: 40px; font-size: 0.7rem; padding: 0.3rem 0.9rem; margin-left: 0.6rem; }
+    /* Contact section - form made smaller and moved higher */
     .contact-grid {
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 3rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
       align-items: start;
+    }
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
     }
     .contact-item {
       display: flex;
       align-items: center;
       gap: 1rem;
-      margin-bottom: 1.5rem;
     }
     .contact-item-icon {
-      width: 45px;
-      height: 45px;
+      width: 40px;
+      height: 40px;
       background: var(--tag-bg);
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--btn-bg);
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
     .contact-item-content h4 {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 600;
       margin-bottom: 0.2rem;
     }
@@ -257,21 +262,32 @@
       color: var(--btn-bg);
       text-decoration: none;
       font-weight: 500;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
     .contact-form {
       background: var(--card-bg);
-      padding: 2rem;
-      border-radius: 14px;
+      padding: 1.5rem;
+      border-radius: 12px;
       border: 1px solid var(--card-border);
+      max-width: 100%;
     }
-    .form-group { margin-bottom: 1.3rem; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      font-size: 0.85rem;
+    }
     .form-group input, .form-group textarea {
-      width: 100%; padding: 0.85rem 1.1rem;
+      width: 100%; padding: 0.7rem 1rem;
       border: 1px solid var(--input-border);
       border-radius: 8px;
       background: var(--bg-body);
       color: var(--text-primary);
+      font-size: 0.9rem;
+    }
+    .form-submit {
+      margin-top: 0.5rem;
     }
     .footer {
       background: var(--section-alt-bg);
@@ -294,8 +310,10 @@
       align-items: center;
       gap: 0.4rem;
     }
-    /* Mobile adjustments: profile pic below eyebrow */
+    /* Responsive fixes */
     @media (max-width: 768px) {
+      h1 { font-size: 2.8rem; }
+      h2 { font-size: 1.8rem; }
       .hero-inner {
         display: block;
       }
@@ -303,7 +321,7 @@
         margin-bottom: 2rem;
       }
       .photo-wrapper {
-        margin: 1rem 0 1.5rem;
+        margin: 1.5rem 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -311,6 +329,31 @@
       .photo-frame {
         max-width: 200px;
       }
+      .nav, .topbar-cta {
+        display: none;
+      }
+      .nav-toggle {
+        display: block;
+      }
+      .edu-cert-wrapper, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-form {
+        margin-top: 1rem;
+        padding: 1.2rem;
+      }
+      .tech-strip {
+        justify-content: center;
+      }
+      .neural-container {
+        height: 120px;
+      }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 2rem; }
+      .hero-actions { flex-direction: column; }
+      .btn { width: 100%; justify-content: center; }
+      .container { padding: 0 1rem; }
     }
   </style>
 </head>
@@ -395,7 +438,7 @@
     </div>
   </section>
 
-  <!-- Projects, Experience, Skills, Education, Contact sections (unchanged) -->
+  <!-- Projects, Experience, Skills, Education sections (unchanged) -->
   <section id="projects" class="section">
     <div class="container">
       <div class="section-head"><p class="eyebrow"><i class="fas fa-laptop-code"></i> PORTFOLIO</p><h2>Recent Projects</h2></div>
@@ -442,6 +485,7 @@
     </div>
   </section>
 
+  <!-- Contact section - form smaller and moved higher -->
   <section id="contact" class="section">
     <div class="container">
       <div class="section-head"><p class="eyebrow"><i class="fas fa-envelope"></i> GET IN TOUCH</p><h2>Let's Connect</h2></div>
@@ -464,7 +508,7 @@
           <div class="form-group"><label for="name">Name</label><input type="text" id="name" required></div>
           <div class="form-group"><label for="email">Email</label><input type="email" id="email" required></div>
           <div class="form-group"><label for="subject">Subject</label><input type="text" id="subject" required></div>
-          <div class="form-group"><label for="message">Message</label><textarea id="message" rows="4" required></textarea></div>
+          <div class="form-group"><label for="message">Message</label><textarea id="message" rows="3" required></textarea></div>
           <div class="form-submit"><button class="btn" type="submit"><i class="fas fa-paper-plane"></i> Send Message</button></div>
         </form>
       </div>
