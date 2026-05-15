@@ -16,9 +16,9 @@
   <style>
     :root {
       --bg-body: #ffffff;
-      --text-primary: #0f172a;
-      --text-secondary: #475569;
-      --text-tertiary: #94a3b8;
+      --text-primary: #1a202c;
+      --text-secondary: #4a5568;
+      --text-tertiary: #718096;
       --card-bg: #ffffff;
       --card-border: #e2e8f0;
       --card-hover-border: #cbd5e1;
@@ -29,7 +29,7 @@
       --btn-text: white;
       --btn-hover-bg: #1d4ed8;
       --btn-outline-border: #cbd5e1;
-      --btn-outline-text: #0f172a;
+      --btn-outline-text: #1a202c;
       --btn-outline-hover-bg: #f1f5f9;
       --link-color: #2563eb;
       --accent-color: #7c3aed;
@@ -45,7 +45,7 @@
 
     body.dark {
       --bg-body: #0f172a;
-      --text-primary: #f1f5f9;
+      --text-primary: #e2e8f0;
       --text-secondary: #cbd5e1;
       --text-tertiary: #94a3b8;
       --card-bg: #1e293b;
@@ -58,7 +58,7 @@
       --btn-text: #ffffff;
       --btn-hover-bg: #2563eb;
       --btn-outline-border: #475569;
-      --btn-outline-text: #f1f5f9;
+      --btn-outline-text: #e2e8f0;
       --btn-outline-hover-bg: #334155;
       --link-color: #60a5fa;
       --accent-color: #a78bfa;
@@ -70,6 +70,34 @@
       --input-focus-ring: rgba(96,165,250,0.2);
       --success-color: #10b981;
       --error-color: #f87171;
+    }
+
+    body.high-contrast {
+      --bg-body: #000000;
+      --text-primary: #ffffff;
+      --text-secondary: #ffffff;
+      --text-tertiary: #ffffff;
+      --card-bg: #000000;
+      --card-border: #ffffff;
+      --link-color: #ffff00;
+      --btn-bg: #ffff00;
+      --btn-text: #000000;
+      --tag-bg: #ffff00;
+      --tag-text: #000000;
+      --chip-bg: #666666;
+    }
+
+    body.focus-mode {
+      background: #faf9f6;
+    }
+
+    body.focus-mode main section:not(:target) {
+      opacity: 0.5;
+    }
+
+    body.focus-mode main section:target,
+    body.focus-mode main section:focus-within {
+      opacity: 1;
     }
 
     * {
@@ -89,6 +117,8 @@
       line-height: 1.6;
       transition: background 0.3s, color 0.2s;
       overflow-x: hidden;
+      font-weight: 400;
+      letter-spacing: 0.3px;
     }
 
     .container {
@@ -98,8 +128,8 @@
     }
 
     h1, h2, h3 {
-      font-weight: 700;
-      letter-spacing: -0.03em;
+      font-weight: 600;
+      letter-spacing: -0.02em;
     }
 
     h1 {
@@ -110,16 +140,19 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      font-weight: 700;
     }
 
     h2 {
       font-size: 2.5rem;
       margin-bottom: 1.5rem;
       color: var(--text-primary);
+      font-weight: 700;
     }
 
     h3 {
       font-size: 1.3rem;
+      font-weight: 600;
     }
 
     .section-head {
@@ -140,10 +173,11 @@
     }
 
     .lead {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: var(--text-secondary);
       margin: 1.5rem 0;
       line-height: 1.8;
+      font-weight: 400;
     }
 
     .muted {
@@ -231,10 +265,10 @@
       bottom: 80px;
       right: 0;
       background: var(--card-bg);
-      border: 1px solid var(--card-border);
+      border: 2px solid var(--link-color);
       border-radius: 12px;
       padding: 1rem;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
       min-width: 180px;
     }
 
@@ -257,10 +291,18 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      font-weight: 500;
     }
 
     .accessibility-menu button:hover {
       background: var(--section-alt-bg);
+      border-color: var(--link-color);
+      color: var(--link-color);
+    }
+
+    .accessibility-menu button.active {
+      background: var(--link-color);
+      color: white;
       border-color: var(--link-color);
     }
 
@@ -479,7 +521,7 @@
     .photo-name {
       text-align: center;
       margin-top: 1.5rem;
-      font-weight: 700;
+      font-weight: 600;
       font-size: 1.3rem;
       color: var(--text-primary);
     }
@@ -512,6 +554,7 @@
       color: var(--text-secondary);
       font-size: 0.95rem;
       line-height: 1.6;
+      font-weight: 400;
     }
 
     .ticks li:before {
@@ -547,6 +590,7 @@
       transition: all 0.3s ease;
       padding: 0.5rem 0.8rem;
       border-radius: 6px;
+      font-weight: 500;
     }
 
     .hero-links a:hover {
@@ -639,6 +683,7 @@
       padding-left: 1.5rem;
       color: var(--text-secondary);
       line-height: 1.8;
+      font-weight: 400;
     }
 
     .exp-list li {
@@ -709,6 +754,7 @@
     .project-top h3 {
       font-size: 1.35rem;
       color: var(--text-primary);
+      font-weight: 700;
     }
 
     .tag {
@@ -728,6 +774,7 @@
       margin-bottom: 1rem;
       line-height: 1.6;
       flex: 1;
+      font-weight: 400;
     }
 
     .chips {
@@ -801,6 +848,7 @@
       display: flex;
       align-items: center;
       gap: 0.7rem;
+      font-weight: 700;
     }
 
     .skill h3 i {
@@ -812,6 +860,7 @@
       color: var(--text-secondary);
       line-height: 1.7;
       font-size: 0.95rem;
+      font-weight: 400;
     }
 
     /* Education Section */
@@ -841,6 +890,7 @@
       display: flex;
       align-items: center;
       gap: 0.7rem;
+      font-weight: 700;
     }
 
     .edu-card h3 i, .certs-card h3 i {
@@ -856,11 +906,13 @@
       font-size: 1.05rem;
       color: var(--text-primary);
       margin-bottom: 0.3rem;
+      font-weight: 600;
     }
 
     .edu-item p, .cert-item p {
       color: var(--text-secondary);
       font-size: 0.9rem;
+      font-weight: 400;
     }
 
     .badge-merit {
@@ -912,17 +964,20 @@
       font-size: 1rem;
       color: var(--text-primary);
       margin-bottom: 0.3rem;
+      font-weight: 600;
     }
 
     .contact-item-content p {
       color: var(--text-secondary);
       font-size: 0.9rem;
+      font-weight: 400;
     }
 
     .contact-item-content a {
       color: var(--link-color);
       text-decoration: none;
       transition: all 0.3s ease;
+      font-weight: 600;
     }
 
     .contact-item-content a:hover {
@@ -960,6 +1015,7 @@
       font-family: inherit;
       font-size: 0.95rem;
       transition: all 0.3s ease;
+      font-weight: 400;
     }
 
     .form-group input:focus,
@@ -1027,6 +1083,7 @@
       text-decoration: none;
       font-size: 0.9rem;
       transition: all 0.3s ease;
+      font-weight: 500;
     }
 
     .footer-links a:hover {
@@ -1191,7 +1248,7 @@
             <i class="fab fa-linkedin"></i> LinkedIn
           </a>
           <span class="dot">•</span>
-          <a href="https://github.com/rashid-k" target="_blank" title="GitHub Profile">
+          <a href="https://github.com/rashidkhan-python" target="_blank" title="GitHub Profile">
             <i class="fab fa-github"></i> GitHub
           </a>
           <span class="dot">•</span>
@@ -1307,7 +1364,7 @@
               <span>PostgreSQL</span>
             </div>
             <div class="project-actions">
-              <a href="#" class="link"><i class="fas fa-github"></i> Code</a>
+              <a href="https://github.com/rashidkhan-python" class="link"><i class="fas fa-github"></i> Code</a>
               <a href="#" class="link"><i class="fas fa-external-link-alt"></i> Demo</a>
             </div>
           </div>
@@ -1329,7 +1386,7 @@
               <span>AWS</span>
             </div>
             <div class="project-actions">
-              <a href="#" class="link"><i class="fas fa-github"></i> Code</a>
+              <a href="https://github.com/rashidkhan-python" class="link"><i class="fas fa-github"></i> Code</a>
               <a href="#" class="link"><i class="fas fa-external-link-alt"></i> Details</a>
             </div>
           </div>
@@ -1351,7 +1408,7 @@
               <span>Snowflake</span>
             </div>
             <div class="project-actions">
-              <a href="#" class="link"><i class="fas fa-github"></i> Code</a>
+              <a href="https://github.com/rashidkhan-python" class="link"><i class="fas fa-github"></i> Code</a>
               <a href="#" class="link"><i class="fas fa-external-link-alt"></i> Live</a>
             </div>
           </div>
@@ -1372,7 +1429,7 @@
               <span>HuggingFace</span>
             </div>
             <div class="project-actions">
-              <a href="#" class="link"><i class="fas fa-github"></i> Code</a>
+              <a href="https://github.com/rashidkhan-python" class="link"><i class="fas fa-github"></i> Code</a>
               <a href="#" class="link"><i class="fas fa-external-link-alt"></i> Paper</a>
             </div>
           </div>
@@ -1513,7 +1570,7 @@
             </div>
             <div class="contact-item-content">
               <h4>GitHub</h4>
-              <p><a href="https://github.com/rashid-k" target="_blank">github.com/rashid-k</a></p>
+              <p><a href="https://github.com/rashidkhan-python" target="_blank">github.com/rashidkhan-python</a></p>
               <p style="font-size: 0.8rem; margin-top: 0.3rem;">Check out my projects</p>
             </div>
           </div>
@@ -1574,7 +1631,7 @@
       </div>
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/rashid-k" target="_blank">LinkedIn</a>
-        <a href="https://github.com/rashid-k" target="_blank">GitHub</a>
+        <a href="https://github.com/rashidkhan-python" target="_blank">GitHub</a>
         <a href="mailto:link2rashidkhan@gmail.com">Email</a>
         <a href="#top">Back to Top</a>
       </div>
@@ -1599,10 +1656,10 @@
     <button onclick="decreaseFontSize()" aria-label="Decrease font size">
       <i class="fas fa-compress"></i> Smaller Text
     </button>
-    <button onclick="toggleHighContrast()" aria-label="Toggle high contrast mode">
+    <button id="highContrastBtn" onclick="toggleHighContrast()" aria-label="Toggle high contrast mode">
       <i class="fas fa-adjust"></i> High Contrast
     </button>
-    <button onclick="toggleFocusMode()" aria-label="Toggle focus mode">
+    <button id="focusModeBtn" onclick="toggleFocusMode()" aria-label="Toggle focus mode">
       <i class="fas fa-eye"></i> Focus Mode
     </button>
   </div>
@@ -1697,47 +1754,77 @@
     }
   });
 
-  // Font size controls
+  // ==================== Font Size Controls ====================
   let currentFontSize = 1;
+  
   function increaseFontSize() {
     if (currentFontSize < 1.5) {
       currentFontSize += 0.1;
-      document.body.style.fontSize = (16 * currentFontSize) + 'px';
-      localStorage.setItem('fontSize', currentFontSize);
+      currentFontSize = Math.round(currentFontSize * 10) / 10;
+      applyFontSize();
     }
   }
 
   function decreaseFontSize() {
     if (currentFontSize > 0.8) {
       currentFontSize -= 0.1;
-      document.body.style.fontSize = (16 * currentFontSize) + 'px';
-      localStorage.setItem('fontSize', currentFontSize);
+      currentFontSize = Math.round(currentFontSize * 10) / 10;
+      applyFontSize();
     }
   }
 
-  // High contrast mode
+  function applyFontSize() {
+    const baseFontSize = 16 * currentFontSize;
+    document.body.style.fontSize = baseFontSize + 'px';
+    localStorage.setItem('fontSize', currentFontSize);
+  }
+
+  // ==================== High Contrast Mode ====================
   function toggleHighContrast() {
-    document.body.classList.toggle('high-contrast');
-    localStorage.setItem('highContrast', document.body.classList.contains('high-contrast'));
+    const isActive = document.body.classList.toggle('high-contrast');
+    localStorage.setItem('highContrast', isActive);
+    
+    const btn = document.getElementById('highContrastBtn');
+    if (isActive) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
   }
 
-  // Focus mode
+  // ==================== Focus Mode ====================
   function toggleFocusMode() {
-    document.body.classList.toggle('focus-mode');
-    localStorage.setItem('focusMode', document.body.classList.contains('focus-mode'));
+    const isActive = document.body.classList.toggle('focus-mode');
+    localStorage.setItem('focusMode', isActive);
+    
+    const btn = document.getElementById('focusModeBtn');
+    if (isActive) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
   }
 
-  // Load saved accessibility settings
-  if (localStorage.getItem('fontSize')) {
-    currentFontSize = parseFloat(localStorage.getItem('fontSize'));
-    document.body.style.fontSize = (16 * currentFontSize) + 'px';
-  }
-  if (localStorage.getItem('highContrast') === 'true') {
-    document.body.classList.add('high-contrast');
-  }
-  if (localStorage.getItem('focusMode') === 'true') {
-    document.body.classList.add('focus-mode');
-  }
+  // ==================== Load Saved Accessibility Settings ====================
+  window.addEventListener('DOMContentLoaded', () => {
+    // Load font size
+    if (localStorage.getItem('fontSize')) {
+      currentFontSize = parseFloat(localStorage.getItem('fontSize'));
+      applyFontSize();
+    }
+
+    // Load high contrast
+    if (localStorage.getItem('highContrast') === 'true') {
+      document.body.classList.add('high-contrast');
+      document.getElementById('highContrastBtn').classList.add('active');
+    }
+
+    // Load focus mode
+    if (localStorage.getItem('focusMode') === 'true') {
+      document.body.classList.add('focus-mode');
+      document.getElementById('focusModeBtn').classList.add('active');
+    }
+  });
 
   // ==================== Contact Form with Formspree ====================
   const form = document.querySelector('.contact-form');
