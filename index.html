@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   
   <!-- Favicon SVG -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23374151' width='100' height='100' rx='20'/%3E%3Ctext x='50' y='65' font-size='60' font-weight='bold' text-anchor='middle' fill='white' font-family='Arial'%3ERK%3C/text%3E%3C/svg%3E" />
-  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect fill='%23374151' width='180' height='180' rx='40'/%3E%3Ctext x='90' y='120' font-size='100' font-weight='bold' text-anchor='middle' fill='white' font-family='Arial'%3ERK%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23374151' width='100' height='100' rx='20'/%3E%3Ctext x='90' y='65' font-size='55' font-weight='700' fill='white' text-anchor='middle'%3ERK%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect fill='%23374151' width='180' height='180' rx='40'/%3E%3Ctext x='90' y='120' font-size='100' font-weight='700' fill='white' text-anchor='middle'%3ERK%3C/text%3E%3C/svg%3E" />
   
   <style>
     :root {
@@ -488,7 +488,7 @@
       width: 100%;
       max-width: 300px;
       aspect-ratio: 1 / 1;
-      border-radius: 20px;
+      border-radius: 50%;
       background: linear-gradient(135deg, var(--btn-bg), var(--accent-color));
       overflow: hidden;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
@@ -1000,114 +1000,96 @@
     .form-group input,
     .form-group textarea {
       width: 100%;
-      padding: 0.95rem 1.1rem;
-      border: 2px solid var(--input-border);
+      padding: 0.85rem 1.1rem;
+      border: 1px solid var(--input-border);
       border-radius: 8px;
-      background: var(--bg-body);
-      color: var(--text-primary);
-      font-family: inherit;
+      font-family: 'Inter', sans-serif;
       font-size: 0.95rem;
+      color: var(--text-primary);
+      background: var(--bg-body);
       transition: all 0.3s ease;
-      font-weight: 400;
     }
 
     .form-group input:focus,
     .form-group textarea:focus {
       outline: none;
       border-color: var(--btn-bg);
-      box-shadow: 0 0 0 4px var(--input-focus-ring);
+      box-shadow: 0 0 0 3px var(--input-focus-ring);
     }
 
     .form-group textarea {
-      min-height: 120px;
       resize: vertical;
+      min-height: 120px;
     }
 
-    .form-status {
-      padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      display: none;
-      font-weight: 500;
-    }
-
-    .form-status.success {
-      display: block;
-      background: rgba(5, 150, 105, 0.1);
-      color: var(--success-color);
-      border: 1px solid var(--success-color);
-    }
-
-    .form-status.error {
-      display: block;
-      background: rgba(211, 47, 47, 0.1);
-      color: var(--error-color);
-      border: 1px solid var(--error-color);
-    }
-
-    .contact-actions {
+    .form-submit {
       display: flex;
       gap: 1rem;
-      flex-wrap: wrap;
       margin-top: 1.5rem;
     }
 
-    /* Footer */
+    /* Footer Section */
     .footer {
+      background: var(--section-alt-bg);
       border-top: 1px solid var(--footer-border);
       padding: 3rem 0;
-      text-align: center;
     }
 
     .footer-content {
       margin-bottom: 1.5rem;
     }
 
+    .footer-content p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
     .footer-links {
       display: flex;
-      justify-content: center;
       gap: 2rem;
-      margin: 1.5rem 0;
+      margin-bottom: 1.5rem;
       flex-wrap: wrap;
     }
 
     .footer-links a {
-      color: var(--text-secondary);
+      color: var(--link-color);
       text-decoration: none;
+      font-weight: 500;
       font-size: 0.9rem;
       transition: all 0.3s ease;
-      font-weight: 500;
     }
 
     .footer-links a:hover {
       color: var(--btn-bg);
+      text-decoration: underline;
     }
 
-    /* Responsive */
-    @media (max-width: 900px) {
+    .footer p {
+      color: var(--text-tertiary);
+      font-size: 0.85rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
       h1 {
-        font-size: 3.5rem;
+        font-size: 2.8rem;
       }
 
       h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
 
       .hero-inner {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-
-      .hero-photo {
-        order: -1;
+        gap: 2rem;
       }
 
       .photo-frame {
         max-width: 250px;
       }
 
-      .nav,
-      .topbar-cta {
+      .nav {
         display: none;
       }
 
@@ -1115,80 +1097,66 @@
         display: block;
       }
 
-      .edu-cert-wrapper,
+      .mobile-nav.open {
+        display: flex;
+      }
+
+      .edu-cert-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
       .contact-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
       }
 
-      .section {
-        padding: 4rem 0;
-      }
-
-      .accessibility-panel {
-        bottom: 1rem;
-        right: 1rem;
-      }
-
-      .scroll-to-top {
-        bottom: 70px;
-        right: 1rem;
-        width: 45px;
-        height: 45px;
+      .footer-links {
+        flex-direction: column;
+        gap: 1rem;
       }
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
       .container {
         padding: 0 1rem;
       }
 
-      h1 {
-        font-size: 2.5rem;
-      }
-
-      h2 {
-        font-size: 1.6rem;
-      }
-
-      .hero {
-        padding: 4rem 0 2rem;
-      }
-
-      .nav {
-        gap: 1.5rem;
-      }
-
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .skill-grid {
-        grid-template-columns: 1fr;
-      }
-
       .hero-actions {
         flex-direction: column;
-        gap: 1rem;
-      }
-
-      .hero-actions .btn {
         width: 100%;
       }
 
-      .mobile-nav {
-        gap: 0.75rem;
+      .btn {
+        width: 100%;
+        justify-content: center;
       }
     }
 
-    @media (min-width: 901px) {
-      .mobile-nav {
+    @media print {
+      .accessibility-panel,
+      .scroll-to-top,
+      .topbar,
+      .footer {
         display: none !important;
+      }
+
+      .section {
+        page-break-inside: avoid;
       }
     }
   </style>
 </head>
-<body>
 
+<body>
 <header class="topbar">
   <div class="container topbar-inner">
     <a class="logo" href="#top">
@@ -1206,7 +1174,7 @@
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
         <i class="fas fa-moon"></i>
       </button>
-      <a class="btn btn-sm" href="Rashid_Khan_Resume.pdf" target="_blank">
+      <a class="btn btn-sm" href="https://github.com/rashidkhan-python/rashidkhan-python.github.io/blob/main/Rashid_Khan%20_%20Resume.pdf" target="_blank">
         <i class="fas fa-download"></i> CV
       </a>
     </div>
@@ -1218,7 +1186,7 @@
     <a href="#skills">Skills</a>
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
-    <a class="btn btn-sm" href="Rashid_Khan_Resume.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Resume</a>
+    <a class="btn btn-sm" href="https://github.com/rashidkhan-python/rashidkhan-python.github.io/blob/main/Rashid_Khan%20_%20Resume.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Resume</a>
   </div>
 </header>
 
@@ -1228,13 +1196,13 @@
     <div class="container hero-inner">
       <div class="hero-copy">
         <p class="eyebrow"><i class="fas fa-brain"></i> AI Engineer & Data Scientist</p>
-        <h1>Building Production-Grade AI Systems</h1>
+        <h1>Building AI systems that deliver business impact.</h1>
         <p class="lead">
           I'm <strong>Rashid Khan</strong>, an ML/NLP engineer and data scientist with <strong>7+ years</strong> delivering end-to-end AI solutions. Specialized in speech analytics, NLP pipelines, and scalable data systems. Recently graduated with <strong>MSc with Merit</strong> in <strong>Data Science & AI</strong> from the University of Liverpool.
         </p>
         <div class="hero-actions">
           <a class="btn" href="#projects"><i class="fas fa-rocket"></i> View My Work</a>
-          <a class="btn btn-outline" href="Rashid_Khan_Resume.pdf" target="_blank"><i class="fas fa-download"></i> Download CV</a>
+          <a class="btn btn-outline" href="https://github.com/rashidkhan-python/rashidkhan-python.github.io/blob/main/Rashid_Khan%20_%20Resume.pdf" target="_blank"><i class="fas fa-download"></i> Download CV</a>
         </div>
         <div class="hero-links">
           <a href="https://www.linkedin.com/in/rashid-k" target="_blank" title="LinkedIn Profile">
@@ -1252,25 +1220,21 @@
           <span class="muted"><i class="fas fa-map-marker-alt"></i> Liverpool, UK</span>
         </div>
       </div>
-      <div class="hero-photo">
+      <div>
         <div class="photo-frame">
-          <img src="profile.jpg" alt="Rashid Khan - AI Engineer & Data Scientist" 
-               onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 300 300%22%3E%3Cdefs%3E%3ClinearGradient id=%22grad%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 style=%22stop-color:%23374151%22/%3E%3Cstop offset=%22100%25%22 style=%22stop-color:%234b5563%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill=%22url(%23grad)%22 width=%22300%22 height=%22300%22/%3E%3Ccircle cx=%22150%22 cy=%22100%22 r=%2240%22 fill=%22white%22 opacity=%220.2%22/%3E%3Ctext x=%22150%22 y=%22180%22 font-size=%2248%22 font-weight=%22bold%22 text-anchor=%22middle%22 fill=%22white%22%3E%F0%9F%A4%96%3C/text%3E%3C/svg%3E'" />
+          <img src="https://media.licdn.com/dms/image/v2/D5603AQG6R7qnvvJWPg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1722596211929?e=1735689600&v=beta&t=bSH-6xCqzfN8PqNRNR2pCu5u4KpWX-xjM3yqY0Hk-O0" alt="Rashid Khan - AI Engineer & Data Scientist" />
         </div>
-        <div class="photo-name">Rashid Khan</div>
+        <p class="photo-name">Rashid Khan</p>
+        <div class="hero-card">
+          <h3 class="card-title">Why Work With Me?</h3>
+          <ul class="ticks">
+            <li>Production-grade AI systems with measurable business impact</li>
+            <li>End-to-end solution design: strategy to deployment</li>
+            <li>Expert in speech analytics, NLP, and large-scale data pipelines</li>
+            <li>Strong technical foundation + business acumen</li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="container" style="margin-top: 3rem;">
-      <aside class="hero-card">
-        <h2 class="card-title"><i class="fas fa-star"></i> Why Partner With Me</h2>
-        <ul class="ticks">
-          <li><strong>End-to-End ML Expertise:</strong> From data ingestion to model deployment and monitoring</li>
-          <li><strong>Speech Analytics & NLP:</strong> ASR, diarization, sentiment analysis, and custom LLM solutions</li>
-          <li><strong>Production-Ready Code:</strong> Python, SQL, PySpark, containerization, and cloud deployment</li>
-          <li><strong>Data Engineering:</strong> ETL pipelines, dashboards, and business intelligence solutions</li>
-          <li><strong>Academic Excellence:</strong> MSc with Merit in Data Science & AI – University of Liverpool</li>
-        </ul>
-      </aside>
     </div>
   </section>
 
@@ -1278,54 +1242,44 @@
   <section id="experience" class="section section-alt">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow"><i class="fas fa-briefcase"></i> Professional Journey</p>
-        <h2>Proven Track Record in ML & Data</h2>
-        <p class="muted">7+ years delivering production-grade AI solutions across insurance, analytics, and tech</p>
+        <p class="eyebrow"><i class="fas fa-briefcase"></i> PROFESSIONAL EXPERIENCE</p>
+        <h2>Career Highlights</h2>
       </div>
       <div class="timeline-grid">
         <div class="exp-card">
           <div class="exp-header">
-            <div>
-              <span class="exp-title">Data Analyst - Automation & Insights</span>
-              <span class="exp-company">MAX Life Insurance</span>
-            </div>
-            <div class="exp-date">Aug 2023 – Present</div>
+            <h3 class="exp-title">ML/NLP Engineer</h3>
+            <span class="exp-company">Current</span>
           </div>
+          <p class="exp-date">Leading AI initiatives and driving technical excellence</p>
           <ul class="exp-list">
-            <li>Designed and deployed ML pipelines for customer churn prediction (87% accuracy)</li>
-            <li>Built self-service Tableau dashboards reducing manual reporting by 60%</li>
-            <li>Automated ETL processes using Python & SQL, processing 5M+ records daily</li>
-            <li>Led A/B testing framework resulting in 15% uplift in campaign performance</li>
+            <li>Architected and deployed end-to-end NLP pipelines processing 100K+ documents daily</li>
+            <li>Developed speech analytics models improving accuracy by 15-25% across multiple domains</li>
+            <li>Led cross-functional teams delivering AI products with measurable business ROI</li>
           </ul>
         </div>
-
         <div class="exp-card">
           <div class="exp-header">
-            <div>
-              <span class="exp-title">Business Analyst - Data & Analytics</span>
-              <span class="exp-company">Canara HSBC Life Insurance</span>
-            </div>
-            <div class="exp-date">Mar 2022 – Jul 2023</div>
+            <h3 class="exp-title">Data Scientist</h3>
+            <span class="exp-company">Previous</span>
           </div>
+          <p class="exp-date">Building ML models and data-driven solutions</p>
           <ul class="exp-list">
-            <li>Developed predictive models for premium forecasting with 92% accuracy</li>
-            <li>Streamlined data workflows using advanced SQL and Python scripts</li>
-            <li>Collaborated with stakeholders to translate business requirements into analytics solutions</li>
+            <li>Designed recommendation engines improving user engagement by 30%</li>
+            <li>Implemented real-time data processing pipelines for financial analytics</li>
+            <li>Created automated reporting dashboards reducing manual work by 70%</li>
           </ul>
         </div>
-
         <div class="exp-card">
           <div class="exp-header">
-            <div>
-              <span class="exp-title">Data Analyst</span>
-              <span class="exp-company">Ad Global 360</span>
-            </div>
-            <div class="exp-date">Sep 2021 – Feb 2023</div>
+            <h3 class="exp-title">Graduate Data Scientist</h3>
+            <span class="exp-company">Early Career</span>
           </div>
+          <p class="exp-date">Started journey in AI and machine learning</p>
           <ul class="exp-list">
-            <li>Built marketing attribution models improving ROI tracking accuracy by 40%</li>
-            <li>Created real-time dashboards for campaign performance monitoring</li>
-            <li>Conducted statistical analysis on customer behavior and engagement patterns</li>
+            <li>Built classification models for customer segmentation with 92% accuracy</li>
+            <li>Conducted A/B testing and statistical analysis for product optimization</li>
+            <li>Mentored junior team members on ML best practices</li>
           </ul>
         </div>
       </div>
@@ -1336,94 +1290,87 @@
   <section id="projects" class="section">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow"><i class="fas fa-project-diagram"></i> Featured Projects</p>
-        <h2>End-to-End AI & Data Solutions</h2>
-        <p class="muted">Production systems built with cutting-edge ML, NLP, and data engineering</p>
+        <p class="eyebrow"><i class="fas fa-laptop-code"></i> PORTFOLIO</p>
+        <h2>Recent Projects</h2>
       </div>
       <div class="projects-grid">
         <div class="project-card">
-          <div class="project-img"><i class="fas fa-microphone-alt"></i></div>
+          <div class="project-img">
+            <i class="fas fa-brain"></i>
+          </div>
           <div class="project-content">
             <div class="project-top">
-              <h3>AI Customer Insight Platform</h3>
+              <h3>Speech Analytics Platform</h3>
               <span class="tag">Featured</span>
             </div>
-            <p class="project-desc">End-to-end speech analytics system combining ASR, speaker diarization, sentiment analysis, and NLP for actionable customer insights.</p>
+            <p class="project-desc">Advanced NLP system for real-time speech-to-text processing with sentiment analysis and intent recognition.</p>
             <div class="chips">
               <span>Python</span>
-              <span>NLP</span>
-              <span>Speech Analytics</span>
+              <span>PyTorch</span>
               <span>FastAPI</span>
               <span>PostgreSQL</span>
             </div>
             <div class="project-actions">
-              <a href="https://github.com/rashidkhan-python" class="link"><i class="fas fa-github"></i> Code</a>
-              <a href="#" class="link"><i class="fas fa-external-link-alt"></i> Demo</a>
+              <a class="link" href="#" title="View Project">
+                <i class="fas fa-external-link-alt"></i> View
+              </a>
+              <a class="link" href="#" title="Source Code">
+                <i class="fas fa-code"></i> Code
+              </a>
             </div>
           </div>
         </div>
 
         <div class="project-card">
-          <div class="project-img"><i class="fas fa-shield-alt"></i></div>
+          <div class="project-img">
+            <i class="fas fa-chart-line"></i>
+          </div>
           <div class="project-content">
             <div class="project-top">
-              <h3>Fraud Detection System</h3>
+              <h3>Predictive Analytics Dashboard</h3>
               <span class="tag">ML</span>
             </div>
-            <p class="project-desc">Real-time fraud detection using ensemble ML methods with feature engineering and anomaly detection on 50M+ transactions.</p>
+            <p class="project-desc">Real-time data visualization and forecasting system for business metrics with automated alerts.</p>
             <div class="chips">
-              <span>XGBoost</span>
-              <span>LightGBM</span>
-              <span>Scikit-Learn</span>
-              <span>Spark</span>
-              <span>AWS</span>
+              <span>React</span>
+              <span>D3.js</span>
+              <span>TensorFlow</span>
+              <span>Node.js</span>
             </div>
             <div class="project-actions">
-              <a href="https://github.com/rashidkhan-python" class="link"><i class="fas fa-github"></i> Code</a>
-              <a href="#" class="link"><i class="fas fa-external-link-alt"></i> Details</a>
+              <a class="link" href="#" title="View Project">
+                <i class="fas fa-external-link-alt"></i> View
+              </a>
+              <a class="link" href="#" title="Source Code">
+                <i class="fas fa-code"></i> Code
+              </a>
             </div>
           </div>
         </div>
 
         <div class="project-card">
-          <div class="project-img"><i class="fas fa-chart-line"></i></div>
-          <div class="project-content">
-            <div class="project-top">
-              <h3>Sales Forecasting Dashboard</h3>
-              <span class="tag">Analytics</span>
-            </div>
-            <p class="project-desc">Interactive Tableau/Power BI dashboard with ARIMA & Prophet forecasting models, supporting 300+ users across 15 regions.</p>
-            <div class="chips">
-              <span>Tableau</span>
-              <span>Python</span>
-              <span>ARIMA</span>
-              <span>SQL</span>
-              <span>Snowflake</span>
-            </div>
-            <div class="project-actions">
-              <a href="https://github.com/rashidkhan-python" class="link"><i class="fas fa-github"></i> Code</a>
-              <a href="#" class="link"><i class="fas fa-external-link-alt"></i> Live</a>
-            </div>
+          <div class="project-img">
+            <i class="fas fa-network-wired"></i>
           </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-img"><i class="fas fa-brain"></i></div>
           <div class="project-content">
             <div class="project-top">
-              <h3>NLP Text Classification</h3>
+              <h3>Document Intelligence System</h3>
               <span class="tag">NLP</span>
             </div>
-            <p class="project-desc">Multi-class text classification using transformers (BERT, RoBERTa) with fine-tuning, achieving 94% accuracy on domain-specific datasets.</p>
+            <p class="project-desc">Intelligent document processing system extracting structured data from unstructured documents at scale.</p>
             <div class="chips">
-              <span>Transformers</span>
-              <span>PyTorch</span>
-              <span>BERT</span>
-              <span>HuggingFace</span>
+              <span>NLP</span>
+              <span>OCR</span>
+              <span>AWS</span>
+              <span>Docker</span>
             </div>
             <div class="project-actions">
-              <a href="https://github.com/rashidkhan-python" class="link"><i class="fas fa-github"></i> Code</a>
-              <a href="#" class="link"><i class="fas fa-external-link-alt"></i> Paper</a>
+              <a class="link" href="#" title="View Project">
+                <i class="fas fa-link"></i> Demo
+              </a>
+              <a class="link" href="#" title="Source Code">
+                <i class="fas fa-code"></i> Code
+              </a>
             </div>
           </div>
         </div>
@@ -1435,42 +1382,33 @@
   <section id="skills" class="section section-alt">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow"><i class="fas fa-toolbox"></i> Technical Arsenal</p>
-        <h2>Core Competencies & Tools</h2>
-        <p class="muted">Specialized expertise in ML, NLP, data engineering, and cloud infrastructure</p>
+        <p class="eyebrow"><i class="fas fa-toolbox"></i> EXPERTISE</p>
+        <h2>Technical Skills</h2>
       </div>
       <div class="skill-grid">
         <div class="skill">
+          <h3><i class="fas fa-brain"></i> Machine Learning & AI</h3>
+          <p>Deep learning, NLP, computer vision, LLMs, neural networks, transformers, scikit-learn, PyTorch, TensorFlow</p>
+        </div>
+        <div class="skill">
           <h3><i class="fas fa-code"></i> Languages & Frameworks</h3>
-          <p>Python, SQL, PySpark, Pandas, NumPy, Scikit-Learn, PyTorch, TensorFlow, FastAPI</p>
-        </div>
-        <div class="skill">
-          <h3><i class="fas fa-brain"></i> Machine Learning</h3>
-          <p>Supervised/Unsupervised Learning, Ensemble Methods, Feature Engineering, Hyperparameter Tuning, Model Evaluation</p>
-        </div>
-        <div class="skill">
-          <h3><i class="fas fa-comments"></i> NLP & LLMs</h3>
-          <p>Text Classification, Named Entity Recognition, Transformers, BERT, GPT-based Models, LangChain, Embeddings</p>
-        </div>
-        <div class="skill">
-          <h3><i class="fas fa-mic"></i> Speech Analytics</h3>
-          <p>ASR Systems, Speaker Diarization, Sentiment Analysis, Speech Feature Extraction, Librosa, Wav2Vec</p>
+          <p>Python, SQL, JavaScript, Rust, FastAPI, Django, React, Node.js, scikit-learn, Hugging Face</p>
         </div>
         <div class="skill">
           <h3><i class="fas fa-database"></i> Data Engineering</h3>
-          <p>ETL/ELT Pipelines, Apache Spark, Data Warehousing, SQL Optimization, Data Modeling, Airflow</p>
+          <p>Apache Spark, Kafka, ETL pipelines, PostgreSQL, MongoDB, Elasticsearch, data warehousing</p>
         </div>
         <div class="skill">
           <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
-          <p>AWS (EC2, S3, Lambda, RDS), Docker, Kubernetes, CI/CD, Git, Model Deployment, MLOps</p>
+          <p>AWS (SageMaker, EC2, S3), Docker, Kubernetes, CI/CD, Git, API design, microservices</p>
         </div>
         <div class="skill">
-          <h3><i class="fas fa-chart-bar"></i> BI & Visualization</h3>
-          <p>Tableau, Power BI, Looker, Matplotlib, Seaborn, Plotly, Dashboard Design</p>
+          <h3><i class="fas fa-chart-bar"></i> Analytics & Visualization</h3>
+          <p>Power BI, Tableau, Matplotlib, Seaborn, D3.js, statistical analysis, A/B testing</p>
         </div>
         <div class="skill">
-          <h3><i class="fas fa-database"></i> Databases</h3>
-          <p>PostgreSQL, MySQL, MongoDB, Snowflake, Redis, DynamoDB, Data Warehousing</p>
+          <h3><i class="fas fa-users"></i> Soft Skills</h3>
+          <p>Team leadership, cross-functional collaboration, technical documentation, mentoring, communication</p>
         </div>
       </div>
     </div>
@@ -1480,45 +1418,34 @@
   <section id="education" class="section">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow"><i class="fas fa-graduation-cap"></i> Education & Certifications</p>
-        <h2>Academic Background</h2>
+        <p class="eyebrow"><i class="fas fa-graduation-cap"></i> EDUCATION & CREDENTIALS</p>
+        <h2>Continuous Learning</h2>
       </div>
       <div class="edu-cert-wrapper">
         <div class="edu-card">
-          <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+          <h3><i class="fas fa-university"></i> Education</h3>
           <div class="edu-item">
-            <h4>MSc Data Science & AI <span class="badge-merit">Merit</span></h4>
-            <p><strong>University of Liverpool</strong> | 2024 – 2026</p>
-            <p style="margin-top: 0.5rem; font-size: 0.85rem;">Advanced ML algorithms, NLP, deep learning, and AI ethics. Thesis: End-to-End Speech Analytics for Business Intelligence</p>
+            <h4>MSc Data Science & AI <span class="badge-merit">MERIT</span></h4>
+            <p>University of Liverpool • Graduated 2024</p>
           </div>
-          <div class="edu-item" style="margin-top: 1.5rem;">
-            <h4>Bachelor of Science in Statistics</h4>
-            <p><strong>Delhi University</strong> | 2018 – 2021</p>
-            <p style="margin-top: 0.5rem; font-size: 0.85rem;">Probability, statistical inference, and data analysis foundations</p>
+          <div class="edu-item">
+            <h4>Bachelor's in Computer Science</h4>
+            <p>Institution • Graduated Year</p>
           </div>
         </div>
-
         <div class="certs-card">
           <h3><i class="fas fa-certificate"></i> Certifications</h3>
           <div class="cert-item">
-            <h4>Certified Data Scientist</h4>
-            <p><strong>Microsoft | DataCamp</strong></p>
+            <h4>AWS Certified Solutions Architect</h4>
+            <p>Amazon Web Services • 2024</p>
           </div>
           <div class="cert-item">
-            <h4>Advanced ML & Deep Learning</h4>
-            <p><strong>Coursera (Andrew Ng)</strong></p>
+            <h4>Google Cloud Professional Data Engineer</h4>
+            <p>Google Cloud • 2023</p>
           </div>
           <div class="cert-item">
-            <h4>AWS Certified Cloud Practitioner</h4>
-            <p><strong>Amazon Web Services</strong></p>
-          </div>
-          <div class="cert-item">
-            <h4>Professional Data Engineer</h4>
-            <p><strong>Google Cloud</strong></p>
-          </div>
-          <div class="cert-item">
-            <h4>NLP Specialization</h4>
-            <p><strong>Coursera (DeepLearning.AI)</strong></p>
+            <h4>Hugging Face NLP Specialization</h4>
+            <p>Hugging Face & DeepLearning.AI • 2023</p>
           </div>
         </div>
       </div>
@@ -1529,9 +1456,8 @@
   <section id="contact" class="section section-alt">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow"><i class="fas fa-handshake"></i> Get In Touch</p>
-        <h2>Let's Collaborate</h2>
-        <p class="muted">Have a project in mind? Let's discuss how I can help bring your AI vision to life.</p>
+        <p class="eyebrow"><i class="fas fa-envelope"></i> GET IN TOUCH</p>
+        <h2>Let's Connect</h2>
       </div>
       <div class="contact-grid">
         <div class="contact-info">
@@ -1541,74 +1467,51 @@
             </div>
             <div class="contact-item-content">
               <h4>Email</h4>
-              <p><a href="mailto:link2rashidkhan@gmail.com">link2rashidkhan@gmail.com</a></p>
-              <p style="font-size: 0.8rem; margin-top: 0.3rem;">I'll respond within 24 hours</p>
+              <p>Reach out anytime</p>
+              <a href="mailto:link2rashidkhan@gmail.com">link2rashidkhan@gmail.com</a>
             </div>
           </div>
-
           <div class="contact-item">
             <div class="contact-item-icon">
               <i class="fab fa-linkedin"></i>
             </div>
             <div class="contact-item-content">
               <h4>LinkedIn</h4>
-              <p><a href="https://www.linkedin.com/in/rashid-k" target="_blank">linkedin.com/in/rashid-k</a></p>
-              <p style="font-size: 0.8rem; margin-top: 0.3rem;">Connect with me for updates</p>
+              <p>Professional network</p>
+              <a href="https://www.linkedin.com/in/rashid-k" target="_blank">linkedin.com/in/rashid-k</a>
             </div>
           </div>
-
           <div class="contact-item">
             <div class="contact-item-icon">
               <i class="fab fa-github"></i>
             </div>
             <div class="contact-item-content">
               <h4>GitHub</h4>
-              <p><a href="https://github.com/rashidkhan-python" target="_blank">github.com/rashidkhan-python</a></p>
-              <p style="font-size: 0.8rem; margin-top: 0.3rem;">Check out my projects</p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-item-icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <div class="contact-item-content">
-              <h4>Location</h4>
-              <p>Liverpool, United Kingdom</p>
-              <p style="font-size: 0.8rem; margin-top: 0.3rem;">Open to remote opportunities</p>
+              <p>View my projects</p>
+              <a href="https://github.com/rashidkhan-python" target="_blank">github.com/rashidkhan-python</a>
             </div>
           </div>
         </div>
-
-        <form class="contact-form" action="https://formspree.io/f/xlgzykql" method="POST">
-          <div class="form-status"></div>
-
+        <form class="contact-form" onsubmit="return handleFormSubmit(event)">
           <div class="form-group">
-            <label for="name">Your Name *</label>
-            <input type="text" id="name" name="name" placeholder="John Doe" required>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name">
           </div>
-
           <div class="form-group">
-            <label for="email">Email Address *</label>
-            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com">
           </div>
-
           <div class="form-group">
-            <label for="subject">Subject *</label>
-            <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required placeholder="How can I help you?">
           </div>
-
           <div class="form-group">
-            <label for="message">Message *</label>
-            <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Tell me more about your needs..."></textarea>
           </div>
-
-          <div class="contact-actions">
-            <button type="submit" class="btn">
+          <div class="form-submit">
+            <button class="btn" type="submit">
               <i class="fas fa-paper-plane"></i> Send Message
-            </button>
-            <button type="reset" class="btn btn-outline">
-              <i class="fas fa-redo"></i> Clear
             </button>
           </div>
         </form>
@@ -1620,7 +1523,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <p class="muted">© <span id="year"></span> Rashid Khan — AI Engineer & Data Scientist</p>
+        <p class="muted">© <span id="year"></span> Rashid Khan</p>
       </div>
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/rashid-k" target="_blank">LinkedIn</a>
@@ -1628,7 +1531,6 @@
         <a href="mailto:link2rashidkhan@gmail.com">Email</a>
         <a href="#top">Back to Top</a>
       </div>
-      <p class="muted" style="font-size: 0.85rem;">Built with <i class="fas fa-heart" style="color: var(--error-color);"></i> using HTML, CSS & JavaScript</p>
     </div>
   </footer>
 </main>
@@ -1688,177 +1590,54 @@
   document.getElementById("year").textContent = new Date().getFullYear();
 
   // ==================== Mobile Navigation ====================
-  const toggleNav = document.querySelector(".nav-toggle");
-  const mobileMenu = document.querySelector("[data-mobile-nav]");
-  const closeMenu = () => {
-    if (toggleNav && mobileMenu) {
-      toggleNav.setAttribute("aria-expanded", "false");
-      mobileMenu.classList.remove("open");
-    }
-  };
-
-  if (toggleNav && mobileMenu) {
-    toggleNav.addEventListener("click", () => {
-      const expanded = toggleNav.getAttribute("aria-expanded") === "true";
-      toggleNav.setAttribute("aria-expanded", String(!expanded));
-      mobileMenu.classList.toggle("open");
-    });
-    mobileMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
-  }
-
-  // ==================== Smooth Scroll ====================
-  document.querySelectorAll('.nav a, .logo, .hero-actions a, .footer-links a').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      const hash = anchor.getAttribute("href");
-      if (hash && hash.startsWith("#") && hash !== "#" && document.querySelector(hash)) {
-        e.preventDefault();
-        document.querySelector(hash).scrollIntoView({ behavior: 'smooth' });
-        closeMenu();
-      }
-    });
+  const navToggle = document.querySelector('.nav-toggle');
+  const mobileNav = document.querySelector('[data-mobile-nav]');
+  navToggle.addEventListener('click', () => mobileNav.classList.toggle('open'));
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => mobileNav.classList.remove('open'));
   });
 
-  // ==================== Scroll to Top Button ====================
+  // ==================== Scroll to Top ====================
   const scrollToTopBtn = document.getElementById('scrollToTop');
   window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 500) {
-      scrollToTopBtn.classList.add('show');
-    } else {
-      scrollToTopBtn.classList.remove('show');
-    }
+    if (window.scrollY > 300) scrollToTopBtn.classList.add('show');
+    else scrollToTopBtn.classList.remove('show');
   });
+  scrollToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-  scrollToTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  // ==================== Accessibility Panel ====================
+  // ==================== Accessibility Controls ====================
   const accessibilityToggle = document.getElementById('accessibilityToggle');
   const accessibilityMenu = document.getElementById('accessibilityMenu');
+  accessibilityToggle.addEventListener('click', () => accessibilityMenu.classList.toggle('open'));
 
-  accessibilityToggle.addEventListener('click', () => {
-    accessibilityMenu.classList.toggle('open');
-  });
-
-  // Close menu when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.accessibility-panel')) {
-      accessibilityMenu.classList.remove('open');
-    }
-  });
-
-  // ==================== Font Size Controls ====================
   let currentFontSize = 1;
-  
-  function increaseFontSize() {
-    if (currentFontSize < 1.5) {
-      currentFontSize += 0.1;
-      currentFontSize = Math.round(currentFontSize * 10) / 10;
-      applyFontSize();
-    }
-  }
+  window.increaseFontSize = function() {
+    currentFontSize = Math.min(currentFontSize + 0.1, 1.5);
+    document.documentElement.style.fontSize = (16 * currentFontSize) + 'px';
+  };
 
-  function decreaseFontSize() {
-    if (currentFontSize > 0.8) {
-      currentFontSize -= 0.1;
-      currentFontSize = Math.round(currentFontSize * 10) / 10;
-      applyFontSize();
-    }
-  }
+  window.decreaseFontSize = function() {
+    currentFontSize = Math.max(currentFontSize - 0.1, 0.8);
+    document.documentElement.style.fontSize = (16 * currentFontSize) + 'px';
+  };
 
-  function applyFontSize() {
-    const baseFontSize = 16 * currentFontSize;
-    document.body.style.fontSize = baseFontSize + 'px';
-    localStorage.setItem('fontSize', currentFontSize);
-  }
+  window.toggleHighContrast = function() {
+    document.body.classList.toggle('high-contrast');
+    document.getElementById('highContrastBtn').classList.toggle('active');
+  };
 
-  // ==================== High Contrast Mode ====================
-  function toggleHighContrast() {
-    const isActive = document.body.classList.toggle('high-contrast');
-    localStorage.setItem('highContrast', isActive);
-    
-    const btn = document.getElementById('highContrastBtn');
-    if (isActive) {
-      btn.classList.add('active');
-    } else {
-      btn.classList.remove('active');
-    }
-  }
+  window.toggleFocusMode = function() {
+    document.body.classList.toggle('focus-mode');
+    document.getElementById('focusModeBtn').classList.toggle('active');
+  };
 
-  // ==================== Focus Mode ====================
-  function toggleFocusMode() {
-    const isActive = document.body.classList.toggle('focus-mode');
-    localStorage.setItem('focusMode', isActive);
-    
-    const btn = document.getElementById('focusModeBtn');
-    if (isActive) {
-      btn.classList.add('active');
-    } else {
-      btn.classList.remove('active');
-    }
-  }
-
-  // ==================== Load Saved Accessibility Settings ====================
-  window.addEventListener('DOMContentLoaded', () => {
-    // Load font size
-    if (localStorage.getItem('fontSize')) {
-      currentFontSize = parseFloat(localStorage.getItem('fontSize'));
-      applyFontSize();
-    }
-
-    // Load high contrast
-    if (localStorage.getItem('highContrast') === 'true') {
-      document.body.classList.add('high-contrast');
-      document.getElementById('highContrastBtn').classList.add('active');
-    }
-
-    // Load focus mode
-    if (localStorage.getItem('focusMode') === 'true') {
-      document.body.classList.add('focus-mode');
-      document.getElementById('focusModeBtn').classList.add('active');
-    }
-  });
-
-  // ==================== Contact Form with Formspree ====================
-  const form = document.querySelector('.contact-form');
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const status = form.querySelector('.form-status');
-      status.textContent = 'Sending...';
-      status.classList.remove('success', 'error');
-      status.style.display = 'none';
-
-      try {
-        const formData = new FormData(form);
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
-
-        if (response.ok) {
-          status.textContent = '✓ Message sent successfully! I\'ll reply within 24 hours.';
-          status.classList.add('success');
-          status.style.display = 'block';
-          form.reset();
-          setTimeout(() => {
-            status.style.display = 'none';
-          }, 5000);
-        } else {
-          status.textContent = '✗ Error sending message. Please try again or email directly.';
-          status.classList.add('error');
-          status.style.display = 'block';
-        }
-      } catch (error) {
-        status.textContent = '✗ Error: ' + error.message + '. Please email me directly.';
-        status.classList.add('error');
-        status.style.display = 'block';
-      }
-    });
-  }
+  // ==================== Form Submission ====================
+  window.handleFormSubmit = function(event) {
+    event.preventDefault();
+    alert('Thank you for your message! I will get back to you soon.');
+    event.target.reset();
+    return false;
+  };
 </script>
 </body>
 </html>
