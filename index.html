@@ -1,284 +1,668 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rashid Khan | Applied AI & Data Science</title>
-  <meta name="description" content="Rashid Khan — Applied AI & Data Science | NLP, Speech Analytics, ML Systems" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <!-- Top bar -->
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="logo" href="#top" aria-label="Go to top">Rashid Khan</a>
-
-      <nav class="nav" aria-label="Primary">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="topbar-cta">
-        <a class="btn btn-outline" href="Rashid_Khan_Resume.pdf" target="_blank" rel="noopener noreferrer">
-          Download Resume
-        </a>
-      </div>
-
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-    </div>
-
-    <!-- Mobile menu -->
-    <div class="mobile-nav" data-mobile-nav>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-      <a class="btn btn-outline" href="Rashid_Khan_Resume.pdf" target="_blank" rel="noopener noreferrer">
-        Download Resume
-      </a>
-    </div>
-  </header>
-
-  <main id="top">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow">Applied AI • Data Science • NLP • Speech Analytics</p>
-          <h1>Hi, I’m Rashid.</h1>
-          <p class="lead">
-            Applied AI & Data Science professional with <strong>7+ years</strong> across insurance and analytics.
-            I build end-to-end ML and NLP systems — from data pipelines to evaluation and stakeholder-ready outputs.
-            Currently pursuing an MSc in Data Science & AI at the University of Liverpool (Jan 2026).
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn" href="#work">View Work</a>
-            <a class="btn btn-outline" href="Rashid_Khan_Resume.pdf" target="_blank" rel="noopener noreferrer">
-              Download Resume
-            </a>
-          </div>
-
-          <div class="hero-links">
-            <a href="https://www.linkedin.com/in/rashid-k" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <span class="dot">•</span>
-            <a href="https://github.com/rashidkhan-python" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <span class="dot">•</span>
-            <a href="mailto:link2rashidkhan@gmail.com">Email</a>
-            <span class="dot">•</span>
-            <span class="muted">Liverpool, UK</span>
-          </div>
-        </div>
-
-        <!-- Photo -->
-        <div class="hero-photo" aria-label="Profile photo">
-          <img src="profile.jpg" alt="Rashid Khan profile photo" />
-        </div>
-
-        <!-- Highlights -->
-        <aside class="hero-card" aria-label="Highlights">
-          <h2 class="card-title">Highlights</h2>
-          <ul class="ticks">
-            <li>End-to-end ML pipelines and evaluation-first development</li>
-            <li>Speech analytics: ASR → diarisation → summaries/sentiment</li>
-            <li>Dashboards and self-service analytics for stakeholders</li>
-            <li>Clear documentation, reproducibility, and practical delivery</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <!-- Work / Projects -->
-    <section id="work" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Work</h2>
-          <p class="muted">
-            Selected projects. Replace the “Repo” links below with your exact GitHub repository URLs.
-          </p>
-        </div>
-
-        <div class="grid">
-          <!-- Project 1 -->
-          <article class="project">
-            <div class="project-top">
-              <h3>VoxSentiment</h3>
-              <span class="tag">Speech Analytics</span>
-            </div>
-            <p>
-              End-to-end system that transforms call audio into speaker-attributed transcripts, concise summaries,
-              and sentiment signals to support QA and escalation workflows.
-            </p>
-            <div class="chips">
-              <span>Whisper/Faster-Whisper</span><span>Diarisation</span><span>Summarisation</span><span>Sentiment</span>
-            </div>
-            <div class="project-actions">
-              <a class="link" href="#" aria-disabled="true">Repo</a>
-            </div>
-          </article>
-
-          <!-- Project 2 -->
-          <article class="project">
-            <div class="project-top">
-              <h3>CNN Image Classification</h3>
-              <span class="tag">Deep Learning</span>
-            </div>
-            <p>
-              Custom and pretrained CNN experiments with robust evaluation protocol, error analysis,
-              and reporting for multi-class image classification.
-            </p>
-            <div class="chips">
-              <span>PyTorch/TensorFlow</span><span>Augmentation</span><span>Cross-Validation</span><span>Confusion Matrix</span>
-            </div>
-            <div class="project-actions">
-              <a class="link" href="#" aria-disabled="true">Repo</a>
-            </div>
-          </article>
-
-          <!-- Project 3 -->
-          <article class="project">
-            <div class="project-top">
-              <h3>ML Risk / Health Prediction</h3>
-              <span class="tag">Machine Learning</span>
-            </div>
-            <p>
-              Structured ML workflow: EDA → feature engineering → model comparison → evaluation.
-              Built for clarity, reproducibility, and decision-ready interpretation.
-            </p>
-            <div class="chips">
-              <span>scikit-learn</span><span>Feature Engineering</span><span>Metrics</span><span>Error Analysis</span>
-            </div>
-            <div class="project-actions">
-              <a class="link" href="#" aria-disabled="true">Repo</a>
-            </div>
-          </article>
-
-          <!-- Project 4 -->
-          <article class="project">
-            <div class="project-top">
-              <h3>Geospatial Analytics Dashboard</h3>
-              <span class="tag">Data Visualization</span>
-            </div>
-            <p>
-              Spatial analysis and dashboarding combining environmental and demographic datasets
-              to surface actionable insights and patterns.
-            </p>
-            <div class="chips">
-              <span>GeoPandas</span><span>Spatial Analysis</span><span>Dashboards</span><span>Maps</span>
-            </div>
-            <div class="project-actions">
-              <a class="link" href="#" aria-disabled="true">Repo</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section section-alt">
-      <div class="container two-col">
-        <div>
-          <h2>About me</h2>
-          <p class="muted">
-            I’m focused on building practical AI systems that work with real constraints: noisy data, operational needs,
-            and stakeholders who need clarity. My background blends analytics engineering, automation, and applied ML/NLP.
-          </p>
-          <p class="muted">
-            I enjoy turning ambiguous problems into measurable deliverables — pipelines, models, dashboards, and clear narratives.
-          </p>
-        </div>
-
-        <div class="about-card">
-          <h3 class="small-title">What you’ll get working with me</h3>
-          <ul class="ticks">
-            <li>Evaluation-first development (metrics + error analysis)</li>
-            <li>Production-leaning pipelines and clean repo hygiene</li>
-            <li>Clear communication to technical + senior audiences</li>
-            <li>Bias for shipping: iterate fast, document well</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Skills</h2>
-          <p class="muted">A focused snapshot of tools I use most.</p>
-        </div>
-
-        <div class="skill-grid">
-          <div class="skill">
-            <h3>Core</h3>
-            <p>Python • SQL • Pandas • NumPy • Git</p>
-          </div>
-          <div class="skill">
-            <h3>Machine Learning</h3>
-            <p>scikit-learn • Feature Engineering • Model Evaluation • XGBoost</p>
-          </div>
-          <div class="skill">
-            <h3>NLP & Speech</h3>
-            <p>ASR (Whisper/Faster-Whisper) • Sentiment • Summarisation • NER</p>
-          </div>
-          <div class="skill">
-            <h3>BI & Data</h3>
-            <p>Power BI • Excel • Snowflake • AWS (Redshift/Athena/Glue)</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section section-alt">
-      <div class="container contact">
-        <div>
-          <h2>Contact</h2>
-          <p class="muted">
-            If you’d like to discuss a role, collaboration, or want a walkthrough of a project, reach out.
-          </p>
-        </div>
-
-        <div class="contact-actions">
-          <a class="btn" href="mailto:link2rashidkhan@gmail.com">Email</a>
-          <a class="btn btn-outline" href="https://www.linkedin.com/in/rashid-k" target="_blank" rel="noopener noreferrer">
-            LinkedIn
-          </a>
-          <a class="btn btn-outline" href="Rashid_Khan_Resume.pdf" target="_blank" rel="noopener noreferrer">
-            Resume (PDF)
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="container footer-inner">
-        <p class="muted">© <span id="y"></span> Rashid Khan</p>
-      </div>
-    </footer>
-  </main>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-
-    const toggle = document.querySelector(".nav-toggle");
-    const mobile = document.querySelector("[data-mobile-nav]");
-
-    function closeMobile() {
-      toggle.setAttribute("aria-expanded", "false");
-      mobile.classList.remove("open");
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Rashid Khan | Applied AI & Data Science – MSc Merit</title>
+  <meta name="description" content="Rashid Khan — Applied AI & Data Science. MSc with Merit, 7+ years in ML/NLP, speech analytics, and end-to-end data systems." />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  
+  <style>
+    :root {
+      --bg-body: #ffffff;
+      --text-primary: #171717;
+      --text-secondary: #5b5b5b;
+      --card-bg: #ffffff;
+      --card-border: #edf2f7;
+      --card-hover-border: #d0dfec;
+      --section-alt-bg: #f9fafb;
+      --hero-card-bg: #f8fafc;
+      --hero-card-border: #eef2f8;
+      --btn-bg: #0a0a0a;
+      --btn-text: white;
+      --btn-outline-border: #d4d4d8;
+      --btn-outline-text: #171717;
+      --btn-outline-hover-bg: #fafafa;
+      --link-color: #2563eb;
+      --tag-bg: #eef2ff;
+      --tag-text: #1e40af;
+      --chip-bg: #f1f5f9;
+      --footer-border: #eef2f5;
+      --input-border: #e2e8f0;
+      --input-focus-ring: rgba(37,99,235,0.1);
     }
 
-    toggle.addEventListener("click", () => {
-      const expanded = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", String(!expanded));
-      mobile.classList.toggle("open");
-    });
+    body.dark {
+      --bg-body: #0f172a;
+      --text-primary: #f1f5f9;
+      --text-secondary: #94a3b8;
+      --card-bg: #1e293b;
+      --card-border: #334155;
+      --card-hover-border: #475569;
+      --section-alt-bg: #111827;
+      --hero-card-bg: #1e293b;
+      --hero-card-border: #334155;
+      --btn-bg: #e2e8f0;
+      --btn-text: #0f172a;
+      --btn-outline-border: #475569;
+      --btn-outline-text: #e2e8f0;
+      --btn-outline-hover-bg: #334155;
+      --link-color: #60a5fa;
+      --tag-bg: #1e293b;
+      --tag-text: #93c5fd;
+      --chip-bg: #334155;
+      --footer-border: #1e293b;
+      --input-border: #475569;
+      --input-focus-ring: rgba(96,165,250,0.2);
+    }
 
-    mobile.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMobile));
-  </script>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-body);
+      color: var(--text-primary);
+      line-height: 1.5;
+      scroll-behavior: smooth;
+      transition: background 0.3s, color 0.2s;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: 3.8rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-head {
+      margin-bottom: 2rem;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      color: var(--link-color);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .lead {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      margin: 1.25rem 0;
+    }
+
+    .muted {
+      color: var(--text-secondary);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--btn-bg);
+      color: var(--btn-text);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 40px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--btn-outline-border);
+      color: var(--btn-outline-text);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--link-color);
+      background: var(--btn-outline-hover-bg);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(0.95);
+    }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      color: var(--text-primary);
+      margin-left: 1rem;
+      padding: 0.4rem;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .theme-toggle:hover {
+      background: var(--chip-bg);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      background: var(--bg-body);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+      border-bottom: 1px solid var(--footer-border);
+      padding: 0.9rem 0;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+
+    .nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+    .nav a:hover { color: var(--link-color); }
+
+    .topbar-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: var(--text-primary);
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      background: var(--bg-body);
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--footer-border);
+    }
+    .mobile-nav.open { display: flex; }
+
+    /* Hero - increased height */
+    .hero {
+      padding: 5rem 0 4rem;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .photo-frame {
+      width: 100%;
+      max-width: 280px;
+      aspect-ratio: 1 / 1;
+      border-radius: 2rem;
+      background: var(--chip-bg);
+      overflow: hidden;
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+      border: 2px solid var(--card-border);
+      margin: 0 auto;
+    }
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .photo-name {
+      text-align: center;
+      margin-top: 1rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--text-primary);
+    }
+    .hero-card {
+      background: var(--hero-card-bg);
+      border-radius: 1.5rem;
+      padding: 1.8rem;
+      border: 1px solid var(--hero-card-border);
+      margin-top: 1.5rem;
+    }
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .ticks {
+      list-style: none;
+    }
+    .ticks li {
+      margin-bottom: 0.75rem;
+      padding-left: 1.6rem;
+      position: relative;
+    }
+    .ticks li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--link-color);
+      font-weight: 600;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      margin: 2rem 0 1.5rem;
+      flex-wrap: wrap;
+    }
+    .hero-links {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+    .hero-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+    .hero-links a:hover { color: var(--link-color); }
+
+    .section {
+      padding: 5rem 0;
+    }
+    .section-alt {
+      background-color: var(--section-alt-bg);
+    }
+
+    .timeline-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .exp-card {
+      background: var(--card-bg);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      border: 1px solid var(--card-border);
+    }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+    }
+    .exp-title { font-size: 1.25rem; font-weight: 700; }
+    .exp-company { font-weight: 600; color: var(--link-color); }
+    .exp-date { font-size: 0.85rem; color: var(--text-secondary); }
+    .exp-list { margin-top: 1rem; padding-left: 1.2rem; color: var(--text-secondary); }
+    .exp-list li { margin-bottom: 0.6rem; }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .project-card {
+      background: var(--card-bg);
+      border-radius: 1.25rem;
+      border: 1px solid var(--card-border);
+      overflow: hidden;
+      transition: 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--card-hover-border);
+    }
+    .project-img {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, var(--link-color), #7c3aed);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: white;
+    }
+    .project-content {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+    }
+    .project-top h3 { font-size: 1.3rem; }
+    .tag {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.7rem;
+      border-radius: 30px;
+    }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+    .chips span {
+      background: var(--chip-bg);
+      font-size: 0.75rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 20px;
+    }
+    .project-actions {
+      margin-top: auto;
+      padding-top: 1rem;
+    }
+    .link {
+      color: var(--link-color);
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .link i {
+      font-size: 0.9rem;
+    }
+
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    .skill h3 { font-size: 1.2rem; margin-bottom: 0.75rem; }
+    .skill p { color: var(--text-secondary); }
+
+    .edu-cert-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .edu-card, .certs-card {
+      background: var(--card-bg);
+      border-radius: 1.25rem;
+      padding: 1.5rem;
+      border: 1px solid var(--card-border);
+    }
+    .badge-merit {
+      background: #dcfce7;
+      color: #15803d;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      padding: 0.2rem 0.7rem;
+      margin-left: 0.6rem;
+    }
+    body.dark .badge-merit {
+      background: #14532d;
+      color: #86efac;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    .contact-form {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 1.25rem;
+      border: 1px solid var(--card-border);
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      border: 1px solid var(--input-border);
+      border-radius: 0.75rem;
+      background: var(--bg-body);
+      color: var(--text-primary);
+      font-family: inherit;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--link-color);
+      box-shadow: 0 0 0 3px var(--input-focus-ring);
+    }
+    .contact-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+    .footer {
+      border-top: 1px solid var(--footer-border);
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      .hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .hero-photo { order: -1; }
+      .photo-frame { max-width: 220px; }
+      h1 { font-size: 2.8rem; }
+      .nav, .topbar-cta { display: none; }
+      .nav-toggle { display: block; }
+      .edu-cert-wrapper, .contact-grid { grid-template-columns: 1fr; }
+      .section { padding: 3rem 0; }
+    }
+    @media (min-width: 801px) {
+      .mobile-nav { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="logo" href="#top">Rashid Khan</a>
+    <nav class="nav">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+    </nav>
+    <div class="topbar-cta">
+      <a class="btn btn-outline" href="Rashid_Khan_Resume.pdf" target="_blank"><i class="fas fa-download"></i> Resume</a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+  </div>
+  <div class="mobile-nav" data-mobile-nav>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a class="btn btn-outline" href="Rashid_Khan_Resume.pdf" target="_blank">Resume</a>
+    <button class="theme-toggle" id="themeToggleMobile"><i class="fas fa-moon"></i> Theme</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Applied AI · Data Science · NLP · Speech Analytics</p>
+        <h1>Building AI systems that deliver business impact.</h1>
+        <p class="lead">
+          I’m <strong>Rashid Khan</strong>, Applied AI & Data Science professional with <strong>7+ years</strong> of experience. I design end‑to‑end ML/NLP pipelines, speech analytics engines, and data products. 
+          Recently graduated with <strong>Merit</strong> in <strong>MSc Data Science & AI</strong> – University of Liverpool (2026). 
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#projects"><i class="fas fa-code-branch"></i> View Projects</a>
+          <a class="btn btn-outline" href="Rashid_Khan_Resume.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Download CV</a>
+        </div>
+        <div class="hero-links">
+          <a href="https://www.linkedin.com/in/rashid-k" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <span class="dot">•</span>
+          <a href="https://github.com/rashid-k" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <span class="dot">•</span>
+          <a href="mailto:link2rashidkhan@gmail.com"><i class="far fa-envelope"></i> Email</a>
+          <span class="dot">•</span>
+          <span class="muted"><i class="fas fa-map-marker-alt"></i> Liverpool, UK</span>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="photo-frame">
+          <!-- Using your photo filename 'profile' - adjust extension if needed -->
+          <img src="profile" alt="Rashid Khan portrait" onerror="this.src='https://placehold.co/400x400/eef2ff/3b82f6?text=Rashid+Khan'">
+        </div>
+        <div class="photo-name">Rashid Khan</div>
+      </div>
+    </div>
+    <div class="container" style="margin-top: 2rem;">
+      <aside class="hero-card">
+        <h2 class="card-title">Why work with me</h2>
+        <ul class="ticks">
+          <li>End-to-end ML & NLP pipelines – from data to evaluation</li>
+          <li>Speech analytics: ASR → diarisation → summaries/sentiment</li>
+          <li>Self-service dashboards & stakeholder‑ready insights</li>
+          <li>MSc with Merit – DS & AI (University of Liverpool)</li>
+          <li>Production‑minded Python, SQL, cloud & BI</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="section-head"><h2>Professional experience</h2><p class="muted">Proven track record in insurance and analytics</p></div>
+      <div class="timeline-grid">
+        <div class="exp-card"><div class="exp-header"><div><span class="exp-title">Data Analyst - Automation & Insights</span> <span class="exp-company">@ MAX Life Insurance</span></div><div class="exp-date">May 2024 – Jan 2025</div></div><ul class="exp-list"><li>Churn prediction (XGBoost) on 500k+ records → 8% churn reduction.</li><li>NLP sentiment pipeline saved 15+ hrs/week.</li><li>Power BI dashboards reallocated £50k budget → 12% lead conversion lift.</li></ul></div>
+        <div class="exp-card"><div class="exp-header"><div><span class="exp-title">Business Analyst</span> <span class="exp-company">@ Canara HSBC Life Insurance</span></div><div class="exp-date">Mar 2023 – Mar 2024</div></div><ul class="exp-list"><li>Fine-tuned Whisper ASR (94% accuracy) on 1,000+ call hours.</li><li>Forecasting (Prophet/SARIMA) 92% accuracy.</li><li>Scrapy web scraping → 20% faster competitive response.</li></ul></div>
+        <div class="exp-card"><div class="exp-header"><div><span class="exp-title">Data Analyst</span> <span class="exp-company">@ Ad Global 360</span></div><div class="exp-date">Sep 2021 – Feb 2023</div></div><ul class="exp-list"><li>Headcount & cost model for board presentations.</li><li>Python automation saved 20+ analyst hours/week.</li><li>Statistical L&D impact analysis.</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-head"><h2>Featured projects</h2><p class="muted">End-to-end AI systems, speech analytics, and data applications</p></div>
+      <div class="projects-grid">
+        <div class="project-card"><div class="project-img"><i class="fas fa-microphone-alt"></i></div><div class="project-content"><div class="project-top"><h3>AI Customer Insight Platform</h3><span class="tag">Speech Analytics</span></div><p>Call audio → speaker transcripts → sentiment/summaries. Streamlit dashboard cut manual review by 80%.</p><div class="chips"><span>Whisper</span><span>RoBERTa</span><span>Streamlit</span></div><div class="project-actions"><a class="link" href="#"><i class="fab fa-github"></i> GitHub Repo</a></div></div></div>
+        <div class="project-card"><div class="project-img"><i class="fas fa-chart-line"></i></div><div class="project-content"><div class="project-top"><h3>Fraud Detection System</h3><span class="tag">Classification</span></div><p>96% precision on 200k transactions, 18% false positive reduction.</p><div class="chips"><span>Scikit-learn</span><span>XGBoost</span></div><div class="project-actions"><a class="link" href="#"><i class="fab fa-github"></i> GitHub Repo</a></div></div></div>
+        <div class="project-card"><div class="project-img"><i class="fas fa-chart-pie"></i></div><div class="project-content"><div class="project-top"><h3>Marketing Attribution</h3><span class="tag">Markov Chains</span></div><p>Multi-touch attribution model increased attributed revenue by £25k/month.</p><div class="chips"><span>Python</span><span>Markov</span></div><div class="project-actions"><a class="link" href="#"><i class="fab fa-github"></i> GitHub Repo</a></div></div></div>
+        <div class="project-card"><div class="project-img"><i class="fas fa-chart-simple"></i></div><div class="project-content"><div class="project-top"><h3>Sales Forecasting Dashboard</h3><span class="tag">Forecasting</span></div><p>Streamlit + Prophet/SARIMA with live API → 92% accuracy.</p><div class="chips"><span>Streamlit</span><span>Prophet</span><span>SARIMA</span></div><div class="project-actions"><a class="link" href="#"><i class="fab fa-github"></i> GitHub Repo</a></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section section-alt">
+    <div class="container"><div class="section-head"><h2>Technical skills</h2><p class="muted">Core stack & specialised domains</p></div>
+      <div class="skill-grid"><div class="skill"><h3><i class="fas fa-code"></i> Languages & Data</h3><p>Python, SQL, Pandas, NumPy, PySpark, Git</p></div><div class="skill"><h3><i class="fas fa-brain"></i> ML & AI</h3><p>scikit-learn, XGBoost, TensorFlow, Feature Engineering</p></div><div class="skill"><h3><i class="fas fa-microphone-alt"></i> NLP & Speech</h3><p>Whisper, spaCy, BERT, Summarisation, Sentiment</p></div><div class="skill"><h3><i class="fas fa-chart-line"></i> BI & Cloud</h3><p>Power BI, Tableau, Excel, Snowflake, AWS</p></div><div class="skill"><h3><i class="fas fa-robot"></i> Automation/Deployment</h3><p>Streamlit, Flask, Airflow, Web scraping, API Integration</p></div></div>
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <div class="container"><div class="edu-cert-wrapper"><div class="edu-card"><h3><i class="fas fa-graduation-cap"></i> Education</h3><div class="edu-item"><h4>MSc Data Science & AI <span class="badge-merit">Merit</span></h4><p>University of Liverpool — Jan 2026</p></div><div class="edu-item"><h4>Bachelor of Technology (Mechanical)</h4><p>Maharshi Dayanand University</p></div></div><div class="certs-card"><h3><i class="fas fa-certificate"></i> Certifications</h3><ul class="ticks"><li>Google Data Analytics Certificate</li><li>Diploma in Italian</li><li>IT Wizard Curriculum</li><li>MSc Merit + Academic Excellence</li></ul></div></div></div>
+  </section>
+
+  <section id="contact" class="section section-alt">
+    <div class="container"><div class="section-head"><h2>Let’s connect</h2><p class="muted">Fill out the form or reach me directly – I’ll reply within 24 hours.</p></div>
+      <div class="contact-grid"><div><div class="contact-actions"><a class="btn" href="mailto:link2rashidkhan@gmail.com"><i class="fas fa-paper-plane"></i> Email me</a><a class="btn btn-outline" href="https://www.linkedin.com/in/rashid-k" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a><a class="btn btn-outline" href="Rashid_Khan_Resume.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume (PDF)</a></div><p class="muted" style="margin-top:1.5rem;"><i class="fas fa-map-marker-alt"></i> Liverpool, UK · Open to full-time/contract roles</p></div>
+        <form class="contact-form" action="https://formspree.io/f/xlgzykql" method="POST"><div class="form-group"><input type="text" name="name" placeholder="Your name" required></div><div class="form-group"><input type="email" name="email" placeholder="Your email" required></div><div class="form-group"><textarea name="message" rows="4" placeholder="Tell me about the opportunity..." required></textarea></div><button type="submit" class="btn">Send message <i class="fas fa-arrow-right"></i></button><p class="form-status"></p></form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><p class="muted">© <span id="year"></span> Rashid Khan — Applied AI & Data Science. Liverpool, UK.</p></div></footer>
+</main>
+
+<script>
+  // Theme toggle - single desktop + mobile menu
+  const toggleBtns = document.querySelectorAll('#themeToggle, #themeToggleMobile');
+  const setTheme = (dark) => {
+    if (dark) { 
+      document.body.classList.add('dark'); 
+      localStorage.setItem('theme', 'dark'); 
+      toggleBtns.forEach(btn => { if(btn) btn.innerHTML = '<i class="fas fa-sun"></i>'; }); 
+    } else { 
+      document.body.classList.remove('dark'); 
+      localStorage.setItem('theme', 'light'); 
+      toggleBtns.forEach(btn => { if(btn) btn.innerHTML = '<i class="fas fa-moon"></i>'; }); 
+    }
+  };
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') setTheme(true);
+  else if (savedTheme === 'light') setTheme(false);
+  else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme(true);
+  toggleBtns.forEach(btn => btn && btn.addEventListener('click', () => setTheme(!document.body.classList.contains('dark'))));
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Mobile nav
+  const toggleNav = document.querySelector(".nav-toggle");
+  const mobileMenu = document.querySelector("[data-mobile-nav]");
+  const closeMenu = () => { if(toggleNav && mobileMenu) { toggleNav.setAttribute("aria-expanded", "false"); mobileMenu.classList.remove("open"); } };
+  if(toggleNav && mobileMenu) {
+    toggleNav.addEventListener("click", () => { const expanded = toggleNav.getAttribute("aria-expanded") === "true"; toggleNav.setAttribute("aria-expanded", String(!expanded)); mobileMenu.classList.toggle("open"); });
+    mobileMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
+  }
+
+  // Smooth scroll
+  document.querySelectorAll('.nav a, .logo, .hero-actions a').forEach(anchor => {
+    anchor.addEventListener('click', (e) => { const hash = anchor.getAttribute("href"); if(hash && hash.startsWith("#") && hash !== "#" && document.querySelector(hash)) { e.preventDefault(); document.querySelector(hash).scrollIntoView({ behavior: "smooth" }); closeMenu(); } });
+  });
+
+  // Formspree AJAX
+  const form = document.querySelector('.contact-form');
+  if(form) {
+    form.addEventListener('submit', async (e) => { e.preventDefault(); const status = form.querySelector('.form-status'); status.textContent = 'Sending...'; const fd = new FormData(form); try { const res = await fetch(form.action, { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } }); if(res.ok) { status.innerHTML = '✅ Message sent! I’ll reply soon.'; form.reset(); } else { status.innerHTML = '❌ Error. Please try again.'; } } catch { status.innerHTML = '❌ Network error.'; } setTimeout(() => status.textContent = '', 4000); });
+  }
+</script>
 </body>
 </html>
