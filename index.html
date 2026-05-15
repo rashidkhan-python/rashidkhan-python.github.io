@@ -135,7 +135,7 @@
     .hero-links { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; font-size: 0.95rem; margin-bottom: 1.5rem; }
     .hero-links a { color: var(--text-secondary); text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.5rem 0.8rem; border-radius: 6px; }
     .hero-links a:hover { background: var(--section-alt-bg); }
-    /* Neural network animation */
+    /* Neural network */
     .neural-container {
       width: 100%; height: 150px; background: var(--animation-bg);
       border-radius: 12px; border: 1px solid var(--card-border);
@@ -177,9 +177,7 @@
       color: white;
       border: none;
     }
-    .metric i {
-      color: white;
-    }
+    .metric i { color: white; }
     /* sections */
     .section { padding: 4rem 0; }
     .section-alt { background-color: var(--section-alt-bg); }
@@ -272,19 +270,24 @@
       align-items: center;
       gap: 0.4rem;
     }
+    /* Mobile adjustments: profile pic below eyebrow */
     @media (max-width: 768px) {
-      h1 { font-size: 2.8rem; }
-      .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
-      .photo-frame { max-width: 220px; }
-      .nav, .topbar-cta { display: none; }
-      .nav-toggle { display: block; }
-      .edu-cert-wrapper, .contact-grid { grid-template-columns: 1fr; }
-      .neural-container { height: 120px; }
-    }
-    @media (max-width: 480px) {
-      h1 { font-size: 2rem; }
-      .hero-actions { flex-direction: column; }
-      .btn { width: 100%; justify-content: center; }
+      .hero-inner {
+        display: block;
+      }
+      /* We'll use JS to move the photo, but keep base styling */
+      .hero-copy {
+        margin-bottom: 2rem;
+      }
+      .photo-wrapper {
+        margin: 1rem 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .photo-frame {
+        max-width: 200px;
+      }
     }
   </style>
 </head>
@@ -313,6 +316,7 @@
     <div class="container hero-inner">
       <div class="hero-copy">
         <p class="eyebrow"><i class="fas fa-brain"></i> AI Engineer & Data Scientist</p>
+        <!-- The photo will be moved here on mobile by JS -->
         <h1>Building AI systems that deliver business impact.</h1>
         <p class="lead">
           I'm <strong>Rashid Khan</strong>, an ML/NLP engineer and data scientist with <strong>7+ years</strong> delivering end-to-end AI solutions. Specialized in speech analytics, NLP pipelines, and scalable data systems. Recently graduated with <strong>MSc with Merit</strong> in <strong>Data Science & AI</strong> from the University of Liverpool.
@@ -330,11 +334,11 @@
           <span class="dot">•</span>
           <span class="muted"><i class="fas fa-map-marker-alt"></i> Liverpool, UK</span>
         </div>
-        <!-- Neural network animation (placed above tech strip) -->
+        <!-- Neural network animation -->
         <div class="neural-container">
           <canvas id="neuralCanvas" width="800" height="150" style="width:100%; height:100%;"></canvas>
         </div>
-        <!-- Tech strip (without 7+ years) -->
+        <!-- Tech strip -->
         <div class="tech-strip">
           <div class="tech-item"><i class="fab fa-python"></i> Python</div>
           <div class="tech-item"><i class="fas fa-brain"></i> PyTorch</div>
@@ -346,11 +350,13 @@
           <div class="metric">MSc Merit</div>
         </div>
       </div>
-      <div>
-        <div class="photo-frame">
-          <img src="https://raw.githubusercontent.com/rashidkhan-python/rashidkhan-python.github.io/main/profile.jpg" alt="Rashid Khan" />
+      <div class="right-col" id="rightCol">
+        <div class="photo-wrapper" id="photoWrapper">
+          <div class="photo-frame">
+            <img src="https://raw.githubusercontent.com/rashidkhan-python/rashidkhan-python.github.io/main/profile.jpg" alt="Rashid Khan" />
+          </div>
+          <p class="photo-name">Rashid Khan</p>
         </div>
-        <p class="photo-name">Rashid Khan</p>
         <div class="hero-card">
           <h3 class="card-title">Why Work With Me?</h3>
           <ul class="ticks">
@@ -364,6 +370,7 @@
     </div>
   </section>
 
+  <!-- Projects, Experience, Skills, Education, Contact sections (same as before) -->
   <section id="projects" class="section">
     <div class="container">
       <div class="section-head"><p class="eyebrow"><i class="fas fa-laptop-code"></i> PORTFOLIO</p><h2>Recent Projects</h2></div>
@@ -417,24 +424,15 @@
         <div class="contact-info">
           <div class="contact-item">
             <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
-            <div class="contact-item-content">
-              <h4>Email</h4>
-              <a href="mailto:link2rashidkhan@gmail.com">link2rashidkhan@gmail.com</a>
-            </div>
+            <div class="contact-item-content"><h4>Email</h4><a href="mailto:link2rashidkhan@gmail.com">link2rashidkhan@gmail.com</a></div>
           </div>
           <div class="contact-item">
             <div class="contact-item-icon"><i class="fab fa-linkedin"></i></div>
-            <div class="contact-item-content">
-              <h4>LinkedIn</h4>
-              <a href="https://www.linkedin.com/in/rashid-k" target="_blank">linkedin.com/in/rashid-k</a>
-            </div>
+            <div class="contact-item-content"><h4>LinkedIn</h4><a href="https://www.linkedin.com/in/rashid-k" target="_blank">linkedin.com/in/rashid-k</a></div>
           </div>
           <div class="contact-item">
             <div class="contact-item-icon"><i class="fab fa-github"></i></div>
-            <div class="contact-item-content">
-              <h4>GitHub</h4>
-              <a href="https://github.com/rashidkhan-python" target="_blank">github.com/rashidkhan-python</a>
-            </div>
+            <div class="contact-item-content"><h4>GitHub</h4><a href="https://github.com/rashidkhan-python" target="_blank">github.com/rashidkhan-python</a></div>
           </div>
         </div>
         <form class="contact-form" onsubmit="return handleFormSubmit(event)">
@@ -494,7 +492,7 @@
     return false;
   };
 
-  // Neural Network Canvas Animation
+  // Neural Network Canvas
   const canvas = document.getElementById('neuralCanvas');
   const ctx = canvas.getContext('2d');
   let width, height, nodes = [], animationId;
@@ -549,6 +547,28 @@
   resizeCanvas(); draw();
   const observer = new MutationObserver(() => { if (animationId) { cancelAnimationFrame(animationId); draw(); } });
   observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+  // Move profile picture on mobile: below the eyebrow
+  function repositionPhoto() {
+    const isMobile = window.innerWidth < 768;
+    const photoWrapper = document.getElementById('photoWrapper');
+    const eyebrow = document.querySelector('.hero-copy .eyebrow');
+    const rightCol = document.getElementById('rightCol');
+    if (!photoWrapper || !eyebrow || !rightCol) return;
+    if (isMobile) {
+      // Move photoWrapper after eyebrow if not already there
+      if (photoWrapper.parentElement !== eyebrow.parentElement || eyebrow.nextElementSibling !== photoWrapper) {
+        eyebrow.insertAdjacentElement('afterend', photoWrapper);
+      }
+    } else {
+      // Move back to right column
+      if (photoWrapper.parentElement !== rightCol) {
+        rightCol.insertBefore(photoWrapper, rightCol.firstChild);
+      }
+    }
+  }
+  window.addEventListener('resize', repositionPhoto);
+  repositionPhoto();
 </script>
 </body>
 </html>
